@@ -220,17 +220,32 @@ h2 {
     max-width: @maxWidthTop;
     padding: 0 40px;
 
+    @media (max-width: 600px) {
+      padding: 0 20px;
+    }
+
     nav a {
       color: @fadedPurple;
       font-size: 2.1rem;
       padding-left: 25px;
 
+      @media (max-width: 768px) {
+        padding-left: 10px;
+        font-size: 1.9rem;
+      }
+
       &:hover {
         color: @deepPurple;
       }
     }
+
     img {
       width: 8%;
+      margin-left: 10%;
+
+      @media (max-width: 768px) {
+        width: 12%;
+      }
     }
   }
 
@@ -239,17 +254,27 @@ h2 {
     max-height: 300px;
     text-align: center;
     color: @fadedPurple;
-    position: absolute;
-    top: 300px;
-    left: 800px;
+    padding-top: 150px;
+
+    @media (max-width: 768px) {
+      padding-top: 75px;
+    }
 
     div h1 {
       font-size: 6rem;
+
+      @media (max-width: 768px) {
+        font-size: 5rem;
+      }
     }
 
     div p {
       font-size: 2rem;
       padding: 20px 0;
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+      }
     }
   }
 }
@@ -284,7 +309,7 @@ h2 {
 
 //SKILLS
 #skills {
-  padding: 50px 0;
+  padding-top: 50px;
   .flex-center();
   // background-color: red;
 
@@ -305,8 +330,13 @@ h2 {
       .flex-row();
       width: 80%;
 
+      @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+      }
+
       .skill-img {
-        width: 30%; //GET IMAGE SIZE FIXED
+        width: 50%;
         padding: 25px;
       }
 
@@ -318,9 +348,57 @@ h2 {
         }
       }
     }
+    .order {
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+      }
+    }
   }
 }
+//WORK
 
+#work {
+  .flex-center();
+  background: @fadedPurple;
+  margin: 50px 0 100px 0;
+
+  .work-wrapper {
+    text-align: center;
+    .flex-center();
+    padding: 100px 0;
+    max-width: @maxWidthMiddle;
+  }
+
+  .work-inner {
+    .flex-col();
+    width: 80%;
+
+    .work-img img {
+      width: 50%;
+    }
+
+    .work-details {
+      padding: 20px;
+
+      @media (max-width: 768px) {
+        padding: 0;
+      }
+
+      h3 {
+        padding: 20px;
+        color: #fff;
+      }
+
+      p {
+        color: #fff;
+
+        a {
+          color: @skyBlue;
+        }
+      }
+    }
+  }
+}
 //CONTACT
 #contact {
   .flex-center();
@@ -342,6 +420,10 @@ h2 {
   }
   .contact-inner p {
     padding: 20px 0 30px 0;
+
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
   }
 
   .contact-inner button {
@@ -376,7 +458,6 @@ h2 {
       }
     }
   }
-
   .copyright {
     font-size: 1.1rem;
     padding: 10px 0;
