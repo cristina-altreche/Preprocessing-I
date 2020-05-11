@@ -121,6 +121,8 @@ a {
 @fadedPurple: #372635b9;
 @deepPurple: #372635;
 @paragraphs: 2.1rem;
+@skyBlue: #b1e8ef;
+// @gradientbcg:linear-gradient (to right,#d8f5df, #b1e8ef);
 
 /*Mixins*/
 .flex-center {
@@ -136,6 +138,12 @@ a {
   align-items: center;
 }
 
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .flex-col {
   display: flex;
   flex-flow: column wrap;
@@ -148,10 +156,31 @@ a {
   font-size: 2.8rem;
 }
 
+.h2Style {
+  color: @fadedPurple;
+  font-size: 2.2rem;
+}
+
+.headerStyle {
+  width: 100%;
+  height: 100px;
+  background-color: @skyBlue;
+  border-radius: 2px;
+  .flex-center();
+}
+
 p {
   font-size: @paragraphs;
   color: @fadedPurple;
   line-height: 3rem;
+}
+
+h3 {
+  .h3Style();
+}
+
+h2 {
+  .h2Style();
 }
 
 /*Header*/
@@ -189,7 +218,7 @@ header {
 
   .landing-wrapper {
     .flex-col();
-    height: 150px;
+    max-height: 300px;
     text-align: center;
     color: @fadedPurple;
   }
@@ -224,7 +253,6 @@ header {
   }
 
   .about-inner h3 {
-    .h3Style();
     padding: 20px 0;
   }
 
@@ -232,3 +260,38 @@ header {
     text-align: center;
   }
 }
+
+/*Skills*/
+#skills {
+  padding: 50px 0;
+  .flex-center();
+
+  .skills-wrapper {
+    max-width: @maxWidthMiddle;
+    .flex-center();
+  }
+
+  .skills-inner {
+    .flex-center();
+    flex-direction: column;
+  }
+
+  .skills-header {
+    .headerStyle();
+  }
+
+  .skill-info {
+    .flex-row();
+    width: 80%;
+  }
+
+  .skill-info img {
+    padding: 20px;
+  }
+
+  .skill-info .skills-details {
+    padding: 30px;
+  }
+}
+
+/*Contact*/
