@@ -115,7 +115,7 @@ a {
   text-decoration: none;
 }
 
-/*Variables*/
+//VARIABLES
 @maxWidthTop: 1200px;
 @maxWidthMiddle: 940px;
 @fadedPurple: #372635b9;
@@ -124,7 +124,7 @@ a {
 @skyBlue: #b1e8ef;
 // @gradientbcg:linear-gradient (to right,#d8f5df, #b1e8ef);
 
-/*Mixins*/
+//MIXINS
 .flex-center {
   display: flex;
   justify-content: center;
@@ -151,14 +151,21 @@ a {
   align-items: center;
 }
 
+.flex-headers {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .h3Style {
-  color: @fadedPurple;
-  font-size: 2.8rem;
+  color: @deepPurple;
+  font-size: 2.2rem;
 }
 
 .h2Style {
-  color: @fadedPurple;
-  font-size: 2.2rem;
+  color: @deepPurple;
+  font-size: 3.5rem;
 }
 
 .headerStyle {
@@ -167,6 +174,17 @@ a {
   background-color: @skyBlue;
   border-radius: 2px;
   .flex-center();
+}
+
+.buttonStyle {
+  background-color: @fadedPurple;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
 }
 
 p {
@@ -183,13 +201,14 @@ h2 {
   .h2Style();
 }
 
-/*Header*/
-header {
+//HEADER
+.header-container {
   background: url(/img/bcg.jpg) center center/cover;
   background-attachment: fixed;
   height: 80vh;
   width: 100%;
   padding-top: 25px;
+  position: relative;
 
   .nav-container {
     .flex-center();
@@ -200,20 +219,19 @@ header {
     width: 100%;
     max-width: @maxWidthTop;
     padding: 0 40px;
-  }
 
-  .nav-wrapper nav a {
-    color: @fadedPurple;
-    font-size: 2.1rem;
-    padding-left: 25px;
-  }
+    nav a {
+      color: @fadedPurple;
+      font-size: 2.1rem;
+      padding-left: 25px;
 
-  .nav-wrapper nav a:hover {
-    color: @deepPurple;
-  }
-
-  .nav-wrapper img {
-    width: 8%;
+      &:hover {
+        color: @deepPurple;
+      }
+    }
+    img {
+      width: 8%;
+    }
   }
 
   .landing-wrapper {
@@ -221,19 +239,22 @@ header {
     max-height: 300px;
     text-align: center;
     color: @fadedPurple;
-  }
+    position: absolute;
+    top: 300px;
+    left: 800px;
 
-  .landing-wrapper div h1 {
-    font-size: 6rem;
-  }
+    div h1 {
+      font-size: 6rem;
+    }
 
-  .landing-wrapper div p {
-    font-size: 2rem;
-    padding: 20px 0;
+    div p {
+      font-size: 2rem;
+      padding: 20px 0;
+    }
   }
 }
 
-/*About*/
+//ABOUT
 #about {
   .flex-center();
   padding-top: 84px;
@@ -246,25 +267,26 @@ header {
   .about-inner {
     max-width: 460px;
     .flex-col();
-  }
 
-  .about-inner img {
-    width: 30%;
-  }
+    img {
+      width: 30%;
+    }
 
-  .about-inner h3 {
-    padding: 20px 0;
-  }
+    h3 {
+      padding: 20px 0;
+    }
 
-  .about-inner p {
-    text-align: center;
+    p {
+      text-align: center;
+    }
   }
 }
 
-/*Skills*/
+//SKILLS
 #skills {
   padding: 50px 0;
   .flex-center();
+  // background-color: red;
 
   .skills-wrapper {
     max-width: @maxWidthMiddle;
@@ -274,24 +296,94 @@ header {
   .skills-inner {
     .flex-center();
     flex-direction: column;
-  }
 
-  .skills-header {
-    .headerStyle();
-  }
+    .skills-header {
+      .headerStyle();
+    }
 
-  .skill-info {
-    .flex-row();
-    width: 80%;
-  }
+    .skill-info {
+      .flex-row();
+      width: 80%;
 
-  .skill-info img {
-    padding: 20px;
-  }
+      .skill-img {
+        width: 30%; //GET IMAGE SIZE FIXED
+        padding: 25px;
+      }
 
-  .skill-info .skills-details {
-    padding: 30px;
+      .skill-details {
+        padding: 35px;
+
+        h3 {
+          padding-bottom: 20px;
+        }
+      }
+    }
   }
 }
 
-/*Contact*/
+//CONTACT
+#contact {
+  .flex-center();
+  padding-bottom: 100px;
+
+  .contact-wrapper {
+    .flex-col();
+    max-width: @maxWidthMiddle;
+    text-align: center;
+  }
+  .contact-header {
+    .headerStyle();
+    .flex-headers();
+    padding: 80px;
+
+    h2 {
+      padding-bottom: 25px;
+    }
+  }
+  .contact-inner p {
+    padding: 20px 0 30px 0;
+  }
+
+  .contact-inner button {
+    .buttonStyle();
+
+    &:hover {
+      background: @deepPurple;
+    }
+  }
+}
+
+//FOOTER
+.footer-wrapper {
+  height: 100px;
+  background-color: @skyBlue;
+  .flex-col();
+  justify-content: space-evenly;
+  width: 100%;
+
+  .footer-links {
+    .flex-row;
+    max-width: @maxWidthMiddle;
+    font-size: 1.5rem;
+
+    a {
+      padding: 10px 10px;
+      color: @fadedPurple;
+      text-transform: lowercase;
+
+      &:hover {
+        color: @deepPurple;
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    color: @fadedPurple;
+
+    a {
+      color: @fadedPurple;
+    }
+  }
+}
