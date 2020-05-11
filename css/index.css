@@ -107,6 +107,7 @@ img {
 a {
   text-decoration: none;
 }
+/*Variables*/
 /*Mixins*/
 .flex-center {
   display: flex;
@@ -125,7 +126,15 @@ a {
   justify-content: center;
   align-items: center;
 }
-/*Variables*/
+.h3Style {
+  color: #372635b9;
+  font-size: 2.8rem;
+}
+p {
+  font-size: 2.1rem;
+  color: #372635b9;
+  line-height: 3rem;
+}
 /*Header*/
 header {
   background: url(/img/bcg.jpg) center center / cover;
@@ -164,7 +173,7 @@ header .landing-wrapper {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  height: 450px;
+  height: 150px;
   text-align: center;
   color: #372635b9;
 }
@@ -174,4 +183,36 @@ header .landing-wrapper div h1 {
 header .landing-wrapper div p {
   font-size: 2rem;
   padding: 20px 0;
+}
+/*About*/
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 84px;
+}
+#about .about-container {
+  max-width: 940px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+#about .about-inner {
+  max-width: 460px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+#about .about-inner img {
+  width: 30%;
+}
+#about .about-inner h3 {
+  color: #372635b9;
+  font-size: 2.8rem;
+  padding: 20px 0;
+}
+#about .about-inner p {
+  text-align: center;
 }
