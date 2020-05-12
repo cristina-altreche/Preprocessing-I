@@ -1,1 +1,467 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+  font-family: "Josefin Sans", sans-serif;
+}
+img {
+  border-radius: 50%;
+}
+a {
+  text-decoration: none;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-col {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.flex-headers {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.h3Style {
+  color: #372635;
+  font-size: 2.2rem;
+}
+.h2Style {
+  color: #372635;
+  font-size: 3.5rem;
+}
+.headerStyle {
+  width: 100%;
+  height: 100px;
+  background-color: #b1e8ef;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonStyle {
+  background-color: #372635b9;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+p {
+  font-size: 2.1rem;
+  color: #372635b9;
+  line-height: 3rem;
+}
+h3 {
+  color: #372635;
+  font-size: 2.2rem;
+}
+h2 {
+  color: #372635;
+  font-size: 3.5rem;
+}
+.header-container {
+  background: url(/img/bcg.jpg) center center / cover;
+  background-attachment: fixed;
+  height: 80vh;
+  width: 100%;
+  padding-top: 25px;
+  position: relative;
+}
+.header-container .nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-container .nav-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+}
+@media (max-width: 600px) {
+  .header-container .nav-wrapper {
+    padding: 0 20px;
+  }
+}
+.header-container .nav-wrapper nav a {
+  color: #372635b9;
+  font-size: 2.1rem;
+  padding-left: 25px;
+}
+@media (max-width: 768px) {
+  .header-container .nav-wrapper nav a {
+    padding-left: 10px;
+    font-size: 1.9rem;
+  }
+}
+.header-container .nav-wrapper nav a:hover {
+  color: #372635;
+}
+.header-container .nav-wrapper img {
+  width: 8%;
+  margin-left: 10%;
+}
+@media (max-width: 768px) {
+  .header-container .nav-wrapper img {
+    width: 12%;
+  }
+}
+.header-container .landing-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  max-height: 300px;
+  text-align: center;
+  color: #372635b9;
+  padding-top: 150px;
+}
+@media (max-width: 768px) {
+  .header-container .landing-wrapper {
+    padding-top: 75px;
+  }
+}
+.header-container .landing-wrapper div h1 {
+  font-size: 6rem;
+}
+@media (max-width: 768px) {
+  .header-container .landing-wrapper div h1 {
+    font-size: 5rem;
+  }
+}
+.header-container .landing-wrapper div p {
+  font-size: 2rem;
+  padding: 20px 0;
+}
+@media (max-width: 768px) {
+  .header-container .landing-wrapper div p {
+    font-size: 1.8rem;
+  }
+}
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 84px;
+}
+#about .about-container {
+  max-width: 940px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+#about .about-inner {
+  max-width: 460px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+#about .about-inner img {
+  width: 30%;
+}
+#about .about-inner h3 {
+  padding: 20px 0;
+}
+#about .about-inner p {
+  text-align: center;
+}
+#skills {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#skills .skills-wrapper {
+  max-width: 940px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#skills .skills-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#skills .skills-inner .skills-header {
+  width: 100%;
+  height: 100px;
+  background-color: #b1e8ef;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#skills .skills-inner .skill-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+@media (max-width: 768px) {
+  #skills .skills-inner .skill-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+#skills .skills-inner .skill-info .skill-img {
+  width: 50%;
+  padding: 25px;
+}
+#skills .skills-inner .skill-info .skill-details {
+  padding: 35px;
+}
+#skills .skills-inner .skill-info .skill-details h3 {
+  padding-bottom: 20px;
+}
+@media (max-width: 768px) {
+  #skills .skills-inner .order {
+    flex-direction: column-reverse;
+  }
+}
+#work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #372635b9;
+  margin: 50px 0 100px 0;
+}
+#work .work-wrapper {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  max-width: 940px;
+}
+#work .work-inner {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+#work .work-inner .work-img img {
+  width: 50%;
+}
+#work .work-inner .work-details {
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  #work .work-inner .work-details {
+    padding: 0;
+  }
+}
+#work .work-inner .work-details h3 {
+  padding: 20px;
+  color: #fff;
+}
+#work .work-inner .work-details p {
+  color: #fff;
+}
+#work .work-inner .work-details p a {
+  color: #b1e8ef;
+}
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+#contact .contact-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 940px;
+  text-align: center;
+}
+#contact .contact-header {
+  width: 100%;
+  height: 100px;
+  background-color: #b1e8ef;
+  border-radius: 2px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+}
+#contact .contact-header h2 {
+  padding-bottom: 25px;
+}
+#contact .contact-inner p {
+  padding: 20px 0 30px 0;
+}
+@media (max-width: 768px) {
+  #contact .contact-inner p {
+    padding: 20px;
+  }
+}
+#contact .contact-inner button {
+  background-color: #372635b9;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+#contact .contact-inner button:hover {
+  background: #372635;
+}
+.footer-wrapper {
+  height: 100px;
+  background-color: #b1e8ef;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.footer-wrapper .footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 940px;
+  font-size: 1.5rem;
+}
+.footer-wrapper .footer-links a {
+  padding: 10px 10px;
+  color: #372635b9;
+  text-transform: lowercase;
+}
+.footer-wrapper .footer-links a:hover {
+  color: #372635;
+}
+.footer-wrapper .copyright {
+  font-size: 1.1rem;
+  padding: 10px 0;
+  color: #372635b9;
+}
+.footer-wrapper .copyright a {
+  color: #372635b9;
+}
